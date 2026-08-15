@@ -28,27 +28,13 @@
         <div class="container">
             <h2>мой проект</h2>
             <div class="project-grid">
-                <!-- единственная карточка, КЛИКАБЕЛЬНАЯ -->
-                <div class="project-card" id="mainProject">
+                <!-- карточка-ссылка, открывается в новом окне -->
+                <a href="project-details.html" target="_blank" class="project-card" id="mainProject">
                     <div class="card-icon">✨</div>
                     <h3>вайб‑лендинг</h3>
                     <p>интерактивная визитка с душой</p>
                     <span class="click-hint">нажми →</span>
-                </div>
-            </div>
-            <!-- блок для дополнительной информации (появляется по клику) -->
-            <div id="projectDetails" class="project-details hidden">
-                <div class="details-inner">
-                    <span class="close-btn" id="closeDetails">&times;</span>
-                    <h3>🌿 вайб‑лендинг</h3>
-                    <p>этот проект — эксперимент в стиле «вайбкодинг». чистая эстетика, мягкие градиенты, плавные переходы и атмосфера уюта. </p>
-                    <p>сделан за вечер под чашечку матча. никакого кринжа — только вибрации.</p>
-                    <div class="tech-tags">
-                        <span>#html</span>
-                        <span>#css</span>
-                        <span>#вайб</span>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
