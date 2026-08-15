@@ -9,6 +9,7 @@ body {
     color: #1e1e2f;
     line-height: 1.6;
     background: #faf8ff;
+    min-height: 100vh;
 }
 
 .container {
@@ -19,7 +20,6 @@ body {
 
 /* ===== header ===== */
 header {
-    background: linear-gradient(145deg, #1e1a3a, #2d1b4e);
     background: radial-gradient(circle at 20% 30%, #3d2a6b, #1a1030);
     color: white;
     text-align: center;
@@ -87,8 +87,9 @@ header p {
     margin-top: 20px;
 }
 
-/* единственная карточка — большая и кликабельная */
+/* карточка-ссылка */
 .project-card {
+    display: block;
     background: white;
     padding: 40px 30px 32px;
     border-radius: 60px 20px 60px 20px;
@@ -101,6 +102,8 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(4px);
     position: relative;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
@@ -151,92 +154,6 @@ header p {
     background: #4b2e7a;
 }
 
-/* ===== детали проекта (popup‑карточка) ===== */
-.project-details {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.project-details.hidden {
-    display: none;
-}
-
-.details-inner {
-    background: white;
-    padding: 40px 36px 36px;
-    border-radius: 48px 16px 48px 16px;
-    max-width: 480px;
-    width: 100%;
-    box-shadow: 0 32px 60px -16px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    background: linear-gradient(145deg, #ffffff, #f6efff);
-    position: relative;
-    animation: fadeSlide 0.3s ease;
-}
-
-@keyframes fadeSlide {
-    0% { opacity: 0; transform: translateY(16px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-.close-btn {
-    position: absolute;
-    top: 16px;
-    right: 22px;
-    font-size: 2rem;
-    line-height: 1;
-    cursor: pointer;
-    color: #3d3a5c;
-    transition: 0.2s;
-    background: rgba(0,0,0,0.03);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-}
-
-.close-btn:hover {
-    background: rgba(45, 27, 78, 0.08);
-    transform: rotate(90deg);
-    color: #1a1030;
-}
-
-.details-inner h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1e1a3a;
-    margin-bottom: 14px;
-}
-
-.details-inner p {
-    margin-bottom: 14px;
-    font-size: 1rem;
-    color: #2d2a4a;
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 16px;
-}
-
-.tech-tags span {
-    background: #2d1b4e;
-    color: white;
-    padding: 4px 18px;
-    border-radius: 60px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    opacity: 0.9;
-}
-
 /* ===== footer ===== */
 footer {
     background: linear-gradient(145deg, #1a1030, #22173f);
@@ -266,9 +183,6 @@ footer .soon {
         font-size: 2.8rem;
     }
     .project-card {
-        padding: 32px 20px;
-    }
-    .details-inner {
         padding: 32px 20px;
     }
     .about p {
