@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Копчик · портфолио</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🐾 копчик</h1>
+            <p>начинающий вайбкодер</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>обо мне</h2>
+            <p>создаю сайты и веб‑приложения. люблю чистый код и продуманный дизайн.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>мой проект</h2>
+            <div class="project-grid">
+                <!-- единственная карточка, КЛИКАБЕЛЬНАЯ -->
+                <div class="project-card" id="mainProject">
+                    <div class="card-icon">✨</div>
+                    <h3>мой сайт с портфолио</h3>
+                    <p>интерактивная визитка с душой</p>
+                    <span class="click-hint">нажми →</span>
+                </div>
+            </div>
+            <!-- блок для дополнительной информации (появляется по клику) -->
+            <div id="projectDetails" class="project-details hidden">
+                <div class="details-inner">
+                    <span class="close-btn" id="closeDetails">&times;</span>
+                    <h3>🌿 мой сайт с портфолио</h3>
+                    <p>этот проект — эксперимент в стиле «вайбкодинг». чистая эстетика, мягкие градиенты, плавные переходы и атмосфера уюта. </p>
+                    <p>сделан за вечер под чашечку матча. никакого кринжа — только вибрации.</p>
+                    <div class="tech-tags">
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#вайб</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 копчик</p>
+            <p class="soon">soon…</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
