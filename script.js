@@ -1,38 +1,26 @@
-// === приветствие ===
-console.log('🐾 добро пожаловать на сайт копчика!');
-
-// === клик по карточке проекта ===
-const projectCard = document.getElementById('mainProject');
-const detailsBlock = document.getElementById('projectDetails');
-const closeBtn = document.getElementById('closeDetails');
-
-function showDetails() {
-    detailsBlock.classList.remove('hidden');
-    // плавный скролл к деталям
-    detailsBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-function hideDetails() {
-    detailsBlock.classList.add('hidden');
-}
-
-// открытие по клику на карточку
-projectCard.addEventListener('click', showDetails);
-
-// закрытие по крестику
-closeBtn.addEventListener('click', hideDetails);
-
-// закрытие по клику вне блока (на фон)
-detailsBlock.addEventListener('click', function(e) {
-    // если клик именно по самому блоку (не по внутреннему контейнеру)
-    if (e.target === detailsBlock) {
-        hideDetails();
-    }
+// Небольшая анимация при наведении на кнопку CTA
+document.querySelector('.cta-box').addEventListener('mouseenter', () => {
+    document.querySelector('.cta-box .arrow').style.transform = 'translateX(10px)';
 });
 
-// (опционально) закрытие по Escape
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && !detailsBlock.classList.contains('hidden')) {
-        hideDetails();
-    }
+document.querySelector('.cta-box').addEventListener('mouseleave', () => {
+    document.querySelector('.cta-box .arrow').style.transform = 'translateX(0)';
+});
+
+// Появление блоков при прокрутке (Вайб-кодер стиль, простой и эффективный)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+// Применяем анимацию к основным секциям
+document.querySelectorAll('.projects, .stats-section, .footer').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'all 0.6s ease';
+    observer.observe(section);
 });
