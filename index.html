@@ -1,62 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Копчик · портфолио</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копчик — UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🐾 копчик</h1>
-            <p>начинающий вайбкодер</p>
-        </div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-left">DESIGNING MEANINGFUL<br>DIGITAL EXPERIENCES</div>
+        <div class="header-logo">M / N</div>
+        <div class="header-right">PORTFOLIO<br>2026</div>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2>обо мне</h2>
-            <p>создаю сайты и веб‑приложения. люблю чистый код и продуманный дизайн.</p>
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">КОПЧИК</h1>
+            <p class="hero-subtitle">UI/UX DESIGNER & CREATIVE THINKER</p>
+            <p class="hero-desc">I craft digital experiences that are beautiful, intuitive, and built with purpose.</p>
+            <div class="line-accent"></div>
+        </div>
+        <div class="hero-image">
+            <div class="green-circle"></div>
+            <!-- Замените src на путь к вашему файлу с миньоном -->
+            <img src="minion.png" alt="Миньон" class="minion-img">
         </div>
     </section>
 
+    <!-- Проекты -->
     <section class="projects">
-        <div class="container">
-            <h2>мой проект</h2>
-            <div class="project-grid">
-                <!-- единственная карточка, КЛИКАБЕЛЬНАЯ -->
-                <div class="project-card" id="mainProject">
-                    <div class="card-icon">✨</div>
-                    <h3>мой сайт с портфолио</h3>
-                    <p>интерактивная визитка с душой</p>
-                    <span class="click-hint">нажми →</span>
+        <div class="projects-left">
+            <h2>SELECTED PROJECTS</h2>
+            <p>A selection of work that reflects strategy, clarity, and impact.</p>
+            <a href="#" class="view-all">VIEW ALL PROJECTS →</a>
+        </div>
+        <div class="projects-right">
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="number">01</span>
+                    <span class="name">LUNAR</span>
                 </div>
-            </div>
-            <!-- блок для дополнительной информации (появляется по клику) -->
-            <div id="projectDetails" class="project-details hidden">
-                <div class="details-inner">
-                    <span class="close-btn" id="closeDetails">&times;</span>
-                    <h3>🌿 мой сайт с портфолио</h3>
-                    <p>этот проект — эксперимент в стиле «вайбкодинг». чистая эстетика, мягкие градиенты, плавные переходы и атмосфера уюта. </p>
-                    <p>сделан за вечер под чашечку матча. никакого кринжа — только вибрации.</p>
-                    <div class="tech-tags">
-                        <span>#html</span>
-                        <span>#css</span>
-                        <span>#вайб</span>
-                    </div>
-                </div>
+                <span class="category">Web Invitation</span>
+                <!-- Замените src на путь к скриншоту с Наталией -->
+                <img src="invite.jpg" alt="Проект Приглашение" class="project-img">
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 копчик</p>
-            <p class="soon">soon…</p>
+    <!-- Навыки и Опыт -->
+    <section class="stats-section">
+        <!-- Навыки -->
+        <div class="skills">
+            <h2>SKILLS & TOOLKIT</h2>
+            <div class="skill-item">
+                <span>USER RESEARCH</span>
+                <div class="bar"><div class="fill" style="width: 40%;"></div></div>
+                <span class="percent">40%</span>
+            </div>
+            <div class="skill-item">
+                <span>UI / UX DESIGN</span>
+                <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+                <span class="percent">50%</span>
+            </div>
+            <div class="skill-item">
+                <span>PROTOTYPING</span>
+                <div class="bar"><div class="fill" style="width: 35%;"></div></div>
+                <span class="percent">35%</span>
+            </div>
+        </div>
+
+        <!-- Опыт -->
+        <div class="impact">
+            <h2>IMPACT & EXPERIENCE</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="big-num">1 <span>+</span></div>
+                    <p>MONTHS OF EXPERIENCE</p>
+                </div>
+                <div class="stat">
+                    <div class="big-num">1</div>
+                    <p>PROJECTS COMPLETED</p>
+                </div>
+                <div class="stat">
+                    <div class="big-num">1 <span>+</span></div>
+                    <p>HAPPY CLIENT</p>
+                </div>
+            </div>
+            <div class="quote-block">
+                <p class="quote">"Vibe coding is not just about writing code, it's about creating feelings."</p>
+                <span class="author">— VIBECODER</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <footer class="footer">
+        <div class="footer-left">
+            <h2>LET'S CONNECT</h2>
+            <p>I'm currently available for freelance and full-time opportunities.</p>
+        </div>
+        <div class="footer-center">
+            <div class="contact-item">
+                <span class="icon">✉</span>
+                <div>
+                    <small>EMAIL</small>
+                    <p>egorkazhuro@yandex.by</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">◎</span>
+                <div>
+                    <small>WEBSITE</small>
+                    <p>kopchik.portfolio</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">⌖</span>
+                <div>
+                    <small>LOCATION</small>
+                    <p>Anywhere in the world</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="cta-box">
+                <p>LET'S BUILD SOMETHING<br>GREAT TOGETHER</p>
+                <span class="arrow">→</span>
+            </div>
         </div>
     </footer>
 
