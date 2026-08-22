@@ -1,13 +1,28 @@
-// Небольшая анимация при наведении на кнопку CTA
-document.querySelector('.cta-box').addEventListener('mouseenter', () => {
-    document.querySelector('.cta-box .arrow').style.transform = 'translateX(10px)';
-});
+// Функции для открытия и закрытия модального окна
+function openModal() {
+    document.getElementById('projectModal').style.display = 'flex';
+}
 
-document.querySelector('.cta-box').addEventListener('mouseleave', () => {
-    document.querySelector('.cta-box .arrow').style.transform = 'translateX(0)';
-});
+function closeModal() {
+    document.getElementById('projectModal').style.display = 'none';
+}
 
-// Появление блоков при прокрутке (Вайб-кодер стиль, простой и эффективный)
+// Закрытие окна при клике мимо контента
+window.onclick = function(event) {
+    const modal = document.getElementById('projectModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Анимация кнопки CTA
+const cta = document.querySelector('.cta-box');
+if (cta) {
+    cta.addEventListener('mouseenter', () => cta.querySelector('.arrow').style.transform = 'translateX(10px)');
+    cta.addEventListener('mouseleave', () => cta.querySelector('.arrow').style.transform = 'translateX(0)');
+}
+
+// Анимация появления блоков при прокрутке
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -17,7 +32,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-// Применяем анимацию к основным секциям
 document.querySelectorAll('.projects, .stats-section, .footer').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
