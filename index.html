@@ -10,9 +10,9 @@
 
     <!-- Шапка -->
     <header class="header">
-        <div class="header-left">DESIGNING MEANINGFUL<br>DIGITAL EXPERIENCES</div>
+        <div class="header-text">DESIGNING MEANINGFUL DIGITAL EXPERIENCES</div>
         <div class="header-logo">M / N</div>
-        <div class="header-right">PORTFOLIO<br>2026</div>
+        <div class="header-text">PORTFOLIO 2026</div>
     </header>
 
     <!-- Главный экран -->
@@ -20,12 +20,12 @@
         <div class="hero-content">
             <h1 class="hero-title">КОПЧИК</h1>
             <p class="hero-subtitle">UI/UX DESIGNER & CREATIVE THINKER</p>
-            <p class="hero-desc">I craft digital experiences that are beautiful, intuitive, and built with purpose.</p>
+            <p class="hero-desc">Я создаю цифровые впечатления, которые красивы, интуитивны и созданы с целью.</p>
             <div class="line-accent"></div>
         </div>
         <div class="hero-image">
             <div class="green-circle"></div>
-            <!-- Замените src на путь к вашему файлу с миньоном -->
+            <!-- Замените на свой путь к миньону -->
             <img src="minion.png" alt="Миньон" class="minion-img">
         </div>
     </section>
@@ -33,18 +33,18 @@
     <!-- Проекты -->
     <section class="projects">
         <div class="projects-left">
-            <h2>SELECTED PROJECTS</h2>
-            <p>A selection of work that reflects strategy, clarity, and impact.</p>
-            <a href="#" class="view-all">VIEW ALL PROJECTS →</a>
+            <h2>ПРОЕКТЫ</h2>
+            <p>Подборка работ, отражающая стратегию, ясность и влияние.</p>
+            <a href="#" class="view-all">СМОТРЕТЬ ВСЕ ПРОЕКТЫ →</a>
         </div>
         <div class="projects-right">
-            <div class="project-card">
+            <div class="project-card" onclick="openModal()">
                 <div class="project-header">
                     <span class="number">01</span>
                     <span class="name">LUNAR</span>
                 </div>
-                <span class="category">Web Invitation</span>
-                <!-- Замените src на путь к скриншоту с Наталией -->
+                <span class="category">Веб-приглашение</span>
+                <!-- Замените на свой путь к картинке с Наталией -->
                 <img src="invite.jpg" alt="Проект Приглашение" class="project-img">
             </div>
         </div>
@@ -52,9 +52,8 @@
 
     <!-- Навыки и Опыт -->
     <section class="stats-section">
-        <!-- Навыки -->
         <div class="skills">
-            <h2>SKILLS & TOOLKIT</h2>
+            <h2>НАВЫКИ</h2>
             <div class="skill-item">
                 <span>USER RESEARCH</span>
                 <div class="bar"><div class="fill" style="width: 40%;"></div></div>
@@ -72,26 +71,25 @@
             </div>
         </div>
 
-        <!-- Опыт -->
         <div class="impact">
-            <h2>IMPACT & EXPERIENCE</h2>
+            <h2>ОПЫТ</h2>
             <div class="stats-grid">
                 <div class="stat">
                     <div class="big-num">1 <span>+</span></div>
-                    <p>MONTHS OF EXPERIENCE</p>
+                    <p>МЕСЯЦ ОПЫТА</p>
                 </div>
                 <div class="stat">
                     <div class="big-num">1</div>
-                    <p>PROJECTS COMPLETED</p>
+                    <p>ПРОЕКТ ГОТОВ</p>
                 </div>
                 <div class="stat">
                     <div class="big-num">1 <span>+</span></div>
-                    <p>HAPPY CLIENT</p>
+                    <p>ДОВОЛЬНЫЙ КЛИЕНТ</p>
                 </div>
             </div>
             <div class="quote-block">
-                <p class="quote">"Vibe coding is not just about writing code, it's about creating feelings."</p>
-                <span class="author">— VIBECODER</span>
+                <p class="quote">"Вайб-кодинг — это не просто написание кода, это создание эмоций."</p>
+                <span class="author">— ВАЙБКОДЕР</span>
             </div>
         </div>
     </section>
@@ -99,39 +97,43 @@
     <!-- Контакты -->
     <footer class="footer">
         <div class="footer-left">
-            <h2>LET'S CONNECT</h2>
-            <p>I'm currently available for freelance and full-time opportunities.</p>
+            <h2>ДАВАЙТЕ СВЯЖЕМСЯ</h2>
+            <p>Сейчас я открыт для фриланса и проектов на полную занятость.</p>
         </div>
         <div class="footer-center">
             <div class="contact-item">
                 <span class="icon">✉</span>
                 <div>
-                    <small>EMAIL</small>
+                    <small>ПОЧТА</small>
                     <p>egorkazhuro@yandex.by</p>
                 </div>
             </div>
-            <div class="contact-item">
-                <span class="icon">◎</span>
-                <div>
-                    <small>WEBSITE</small>
-                    <p>kopchik.portfolio</p>
-                </div>
-            </div>
+            <!-- Блок WEBSITE убран, как ты просил -->
             <div class="contact-item">
                 <span class="icon">⌖</span>
                 <div>
-                    <small>LOCATION</small>
-                    <p>Anywhere in the world</p>
+                    <small>ЛОКАЦИЯ</small>
+                    <p>В любой точке мира</p>
                 </div>
             </div>
         </div>
         <div class="footer-right">
             <div class="cta-box">
-                <p>LET'S BUILD SOMETHING<br>GREAT TOGETHER</p>
+                <p>ДАВАЙТЕ СОЗДАДИМ<br>ЧТО-ТО ВЕЛИКОЕ</p>
                 <span class="arrow">→</span>
             </div>
         </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Проект: Веб-приглашение</h2>
+            <p>Это современное и стильное веб-приложение для приглашения на прогулку. Разработано с использованием HTML, CSS и JavaScript. Отличается приятной анимацией и адаптивным дизайном.</p>
+            <a href="https://n0qws.github.io/walking/" target="_blank" class="project-link">Перейти на сайт проекта →</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
